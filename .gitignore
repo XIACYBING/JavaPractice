@@ -27,5 +27,3 @@ hs_err_pid*
 *.cmd
 *.iml
 target
-
-# test vim editor
