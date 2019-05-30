@@ -38,4 +38,12 @@ public class HelloController extends HttpServlet {
     return retMap;
   }
 
+  @RequestMapping(value = "/testvim",method = RequestMethod.GET)
+  @ResponseBody
+  public Map<String,Object> testVim(){
+    Map<String,Object> retMap = new HashMap<>(1);
+    retMap.put("testVimEditor","success");
+    return retMap;
+  }
+	  
 }
