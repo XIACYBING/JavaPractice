@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.poolPreparedStatements",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.poolPreparedStatements."
+    },
+    {
+      "name": "spring.datasource.maxActive",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.maxActive."
+    },
+    {
+      "name": "spring.datasource.initialSize",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.initialSize."
+    },
+    {
+      "name": "spring.datasource.maxWait",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.maxWait."
+    },
+    {
+      "name": "spring.datasource.maxPoolPreparedStatementPerConnectionSize",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.maxPoolPreparedStatementPerConnectionSize."
+    },
+    {
+      "name": "spring.datasource.testOnReturn",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.testOnReturn."
+    }
+  ]
+}
