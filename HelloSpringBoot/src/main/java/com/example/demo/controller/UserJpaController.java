@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,17 +26,20 @@ public class UserJpaController {
   private UserJpa userJpa;
 
   @RequestMapping(value = "/list",method = RequestMethod.GET)
+  @ResponseBody
   public List<User> list(){
     return userJpa.findAll();
   }
 
   @RequestMapping(value = "/add",method = RequestMethod.POST)
+  @ResponseBody
   public List<User> add(User user){
     userJpa.save(user);
     return userJpa.findAll();
   }
 
   @RequestMapping(value = "/del",method = RequestMethod.GET)
+  @ResponseBody
   public List<User> del(Long id){
     userJpa.deleteById(id);
     return userJpa.findAll();
