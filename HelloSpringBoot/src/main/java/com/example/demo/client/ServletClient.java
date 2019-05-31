@@ -30,7 +30,6 @@ public class ServletClient {
 
     public static void main(String[] args) throws IOException {
         System.out.println("userAddByPost");
-        userAddByPost();
     }
 
     private static void firstGet() throws IOException {
