@@ -30,6 +30,7 @@ public class HelloController extends HttpServlet {
     return "index";
   }
 
+
   @RequestMapping(value = "/toJson",method = RequestMethod.GET)
   @ResponseBody
   public Map<String,Object> toJson(){
