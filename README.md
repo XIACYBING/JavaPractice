@@ -1,3 +1,5 @@
 # JavaPractice
 JavaPracticeProject
-#Vim Editor Message
+<<<<<<< HEAD
+#Vim Editor Message abandon
+#testBranchMergeConflict saved
