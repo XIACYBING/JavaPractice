@@ -5,8 +5,8 @@ spring:
       prefix: /     #当项目作为SpringBoot模块子项目时，需要去Run Configurations里面配置Working Dirktory，否则项目里面配置的很多路径都会从SpringBoot主项目开始找
       suffix: .jsp
   #freemarker:
-    #template-loader-path: classpath:/templates
-    #suffix: .ftl
+    template-loader-path: classpath:/templates
+    suffix: .ftl
 
   #配置数据源
   datasource:
