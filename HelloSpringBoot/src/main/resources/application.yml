@@ -30,58 +30,19 @@ spring:
     #添加Druid配置
     type: com.alibaba.druid.pool.DruidDataSource
     #配置监控统计拦截的filters，去掉后在监控界面会无法统计SQL，
-    #filters: stat,wall,log4j
-    #最大活跃数
-    #maxActive: 20
-    #初始化数量
-    #initialSize: 1
-    #连接等待超时最大时间
-    #maxWait: 60000
-    #打开PSCache
-    #poolPreparedStatements: true
-    #指定每一个连接的PSCache的大小
-    #maxPoolPreparedStatementPerConnectionSize: 20
-    #通过ConnectionProperties打开mergeSQL功能；慢SQL记录
-    #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=true
-    #minIdle: 1
-    #timeBetweenEvictionRunsMillis: 60000
-    #minEvictbleIdleTimeMillis: 300000
-    #validationQuery: select 1 from dual
-    #testWhileIdle: true
-    #testOnBorrow: false
-    #testOnReturn: f#最大活跃数
-    #maxActive: 20
-    #初始化数量
-    #initialSize: 1
-    #最大连接等待超时时间
-    #maxWait: 60000
-    #打开PSCache，并且指定每个连接PSCache的大小
-    #poolPreparedStatements: true
-    #maxPoolPreparedStatementPerConnectionSize: 20
-    #通过connectionProperties属性来打开mergeSql功能；慢SQL记录
-    #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    #minIdle: 1
-    #timeBetweenEvictionRunsMillis: 60000
-    #minEvictableIdleTimeMillis: 300000
-    #validationQuery: select 1 from dual
-    #testWhileIdle: true
-    #testOnBorrow: false
-    #testOnReturn: false
-    #配置监控统计拦截的filters，去掉后监控界面sql将无法统计,'wall'用于防火墙
-    #filters: stat, wall, log4jalse
-
-
+    filters: stat,wall,log4j
     #最大活跃数
     maxActive: 20
     #初始化数量
     initialSize: 1
-    #最大连接等待超时时间
+    #连接等待超时最大时间
     maxWait: 60000
-    #打开PSCache，并且指定每个连接PSCache的大小
+    #打开PSCache
     poolPreparedStatements: true
+    #指定每一个连接的PSCache的大小
     maxPoolPreparedStatementPerConnectionSize: 20
-    #通过connectionProperties属性来打开mergeSql功能；慢SQL记录
-    #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #通过ConnectionProperties打开mergeSQL功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=true
     minIdle: 1
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
@@ -89,8 +50,6 @@ spring:
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
-    #配置监控统计拦截的filters，去掉后监控界面sql将无法统计,'wall'用于防火墙
-    filters: stat, wall, log4j
 
 
   #配置SpringBoot下的SpringData的JPA
@@ -101,6 +60,8 @@ spring:
         show_sql: true
         format_sql: true
         naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    #默认开启，在事务外也可以访问懒加载的数据
+    open-in-view: false
 
 
 server:
