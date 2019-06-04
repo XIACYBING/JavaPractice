@@ -6,4 +6,16 @@
         select * from proticable
     </select>
 
+    <select id="selOne" parameterType="_int" resultType="com.mybatis.entity.User">
+        select name from proticable where uid = #{0}
+    </select>
+
+    <select id="selMap" parameterType="_int" resultType="map">
+        select * from proticable where uid = #{0}
+    </select>
+
+    <select id="selMapInterface" parameterType="_int" resultType="com.mybatis.entity.User">
+        select * from proticable where uid = #{0} or uid = #{param2}
+    </select>
+
 </mapper>

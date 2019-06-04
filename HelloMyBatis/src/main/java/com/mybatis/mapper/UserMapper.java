@@ -1,8 +1,10 @@
 package com.mybatis.mapper;
 
 import com.mybatis.entity.User;
+import org.apache.ibatis.annotations.MapKey;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @program: ideaWorkspace
@@ -13,5 +15,10 @@ import java.util.List;
 public interface UserMapper {
 
     List<User> selAll();
+
+    User selOne(int uid);
+
+    @MapKey("uid")
+    Map<Long,User> selMapInterface(int uid0,int uid1);
 
 }
