@@ -1,4 +1,4 @@
-package com.mybatis.controller;
+package com.mybatis.test;
 
 import com.mybatis.entity.User;
 import com.mybatis.mapper.UserMapper;
