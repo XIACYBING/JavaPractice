@@ -1,6 +1,7 @@
 package com.mybatis.controller;
 
 import com.mybatis.entity.User;
+import com.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -22,10 +23,13 @@ public class ShowUser {
         InputStream in = Resources.getResourceAsStream("MyBatis.xml");
         SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(in);
         SqlSession session = sessionFactory.openSession();
-        List<User> list = session.selectList("com.mybatis.mapper.UserMapper.selAll");
+        /*List<User> list = session.selectList("com.mybatis.mapper.UserMapper.selAll");*/
+        UserMapper userMapper = session.getMapper(UserMapper.class);
+        List<User> list = userMapper.selAll();
         for(User user:list){
             System.out.println(user.toString());
         }
+        session.close();
     }
 
 }
