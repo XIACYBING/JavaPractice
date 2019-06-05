@@ -2,6 +2,7 @@ package com.mybatis.mapper;
 
 import com.mybatis.entity.User;
 import org.apache.ibatis.annotations.MapKey;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -20,5 +21,9 @@ public interface UserMapper {
 
     @MapKey("uid")
     Map<Long,User> selMapInterface(int uid0,int uid1);
+
+    List<User> selPageByMap(Map<String,Object> paramMap);
+
+    List<User> selPageByParam(@Param("pageStart") int pageStart,@Param("pageSize") int pageSize);
 
 }
