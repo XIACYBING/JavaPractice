@@ -5,6 +5,12 @@
         <!--开启Log4j支持-->
         <setting name="logImpl" value="LOG4J"/>
     </settings>
+    <typeAliases>
+        <!--单独为某个类起别名-->
+        <typeAlias type="com.mybatis.entity.User" alias="User"/>
+        <!--该包下所有类的别名为类名-->
+        <package name="com.mybatis.entity"/>
+    </typeAliases>
     <environments default="MySQL">
         <environment id="MySQL">
             <transactionManager type="JDBC">

@@ -14,15 +14,15 @@
         select * from proticable where uid = #{0}
     </select>
 
-    <select id="selMapInterface" parameterType="_int" resultType="com.mybatis.entity.User">
+    <select id="selMapInterface" parameterType="_int" resultType="User">
         select * from proticable where uid = #{0} or uid = #{param2}
     </select>
 
-    <select id="selPageByMap" parameterType="map" resultType="com.mybatis.entity.User">
+    <select id="selPageByMap" parameterType="map" resultType="User">
         select * from proticable limit #{pageStart},#{pageSize}
     </select>
 
-    <select id="selPageByParam" resultType="com.mybatis.entity.User">
+    <select id="selPageByParam" resultType="User">
         select * from proticable limit #{pageStart},#{pageSize}
     </select>
 
