@@ -24,6 +24,10 @@
         </environment>
     </environments>
     <mappers>
+        <!--指定xml和注册接口有一个就可以了，如果两个都指定了同一个对应的Mapper，则会报错重复注册-->
+        <!--指定Mapper.xml文件-->
         <mapper resource="com/mybatis/mapper/UserMapper.xml"/>
+        <!--注解Mapper接口-->
+        <!--<package name="com.mybatis.mapper"/>-->
     </mappers>
 </configuration>

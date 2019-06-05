@@ -26,4 +26,16 @@
         select * from proticable limit #{pageStart},#{pageSize}
     </select>
 
+    <insert id="insOne" parameterType="User">
+        insert into proticable(uid,name,pwd) values(default,#{name},#{pwd})
+    </insert>
+
+    <update id="updPwd" parameterType="string">
+        update proticable set pwd = #{0} where name = "zhangqi"
+    </update>
+
+    <delete id="delOne" parameterType="long">
+        delete from proticable where uid = #{0}
+    </delete>
+
 </mapper>
