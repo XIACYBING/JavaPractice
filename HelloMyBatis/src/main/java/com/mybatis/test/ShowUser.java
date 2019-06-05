@@ -3,10 +3,10 @@ package com.mybatis.test;
 import com.mybatis.entity.User;
 import com.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +22,7 @@ import java.util.Map;
 public class ShowUser {
 
     public static void main(String[] args) throws IOException {
+        Logger logger = Logger.getLogger(ShowUser.class);
         InputStream in = Resources.getResourceAsStream("MyBatis.xml");
         SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(in);
         SqlSession session = sessionFactory.openSession();
@@ -30,6 +31,7 @@ public class ShowUser {
         List<User> list0 = session.selectList("com.mybatis.mapper.UserMapper.selAll");
         for(User user0 : list0){
             System.out.println("selectList:" + user0.toString());
+            logger.info("selectList:" + user0.toString());
         }
 
         /**直接调用Mapper.xml进行selectOne查询*/
