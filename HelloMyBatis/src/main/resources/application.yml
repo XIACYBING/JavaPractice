@@ -1,0 +1,10 @@
+Spring:
+  mvc:
+    #配置Jsp视图解析
+    view:
+      prefix: /
+      suffix: .jsp
+
+server:
+  #更换端口
+  port: 8082
