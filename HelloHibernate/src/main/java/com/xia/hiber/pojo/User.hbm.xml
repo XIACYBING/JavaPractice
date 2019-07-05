@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xia.hiber.pojo">
+
+    <class name="User" table="_user" lazy="true">
+        <id name="uid">
+            <generator class="native"/>
+        </id>
+        <property name="uname"
+                  type="java.lang.String"
+                  not-null="true"
+                  length="15"
+                  column="userName"
+                  />
+        <property name="birthday"
+                  type="java.sql.Date"
+                  not-null="false"
+                  column="birthday"
+                  />
+    </class>
+
+</hibernate-mapping>

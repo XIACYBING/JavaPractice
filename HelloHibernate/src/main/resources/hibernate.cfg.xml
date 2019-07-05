@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="show_sql">true</property>
+        <!--hbm2ddl.auto的作用是每次更新数据库表结构，比如create会在每次加载hibernate的时候删除上一次的表，create-drop会在每一次加载完成后删除表-->
+        <property name="hbm2ddl.auto">create</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/mmall</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+
+        <mapping resource="com/xia/hiber/pojo/User.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>
