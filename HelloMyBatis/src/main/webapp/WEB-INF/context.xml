@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <Resources
-        driverClassName = "com.mysql.jdbc.Driver"
-        url = "jdbc:mysql://localhost:3306/mmall?characterEncoding=utf8"
-        username = "root"
-        password = "root"
-        maxActive = "5"
-        maxIdle = "2"
-        maxWait = "10000"
-        name = "tomcatPool"
-        auth = "container"
-        type = "javax.sql.DataSource"
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <!--删除等号两边的空格-->
+    <Resource
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/mmall?characterEncoding=utf8"
+        username="root"
+        password="root"
+        maxActive="5"
+        maxIdle="2"
+        maxWait="10000"
+        name="tomcatPool"
+        auth="Container"
+        type="javax.sql.DataSource"
     />
 </Context>

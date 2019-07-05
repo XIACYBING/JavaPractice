@@ -11,6 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>MyBatisPrac</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>../HelloHibernate</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -39,7 +43,15 @@
                 </includes>
                 <!--<filtering>true</filtering>-->
             </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
         </resources>
     </build>
+
+
 
 </project>

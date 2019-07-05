@@ -2,8 +2,16 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-           version="2.5">
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <!--https://blog.csdn.net/u010173095/article/details/78350992-->
+    <resource-ref>
+        <description>Datasource</description>
+        <res-ref-name>tomcatPool</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 
     <servlet>
         <servlet-name>test</servlet-name>
