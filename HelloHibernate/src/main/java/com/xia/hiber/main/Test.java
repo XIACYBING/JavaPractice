@@ -20,7 +20,7 @@ public class Test {
         cf.configure();
         SessionFactory sf = cf.buildSessionFactory();
         Session session = sf.openSession();
-        User user = new User("test2",new Date(System.currentTimeMillis()));
+        User user = new User("test32",new Date(System.currentTimeMillis()));
         session.save(user);
         session.close();
     }
